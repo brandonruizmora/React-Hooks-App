@@ -14,7 +14,7 @@ export const SimpleForm = () => {
     }, []);
 
     useEffect(() => {
-        console.log('useEffect formState change');
+        console.log('useEffect listening for formState changes');
     }, [formState]);
 
     const handleInputChange = function ({ target }) {
