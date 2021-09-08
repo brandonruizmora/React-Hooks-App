@@ -25,16 +25,12 @@ export const useFetch = (url) => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                if (isMounted) {
-                    setTimeout(() => {
-                        setState({
-                            loading: false,
-                            error: null,
-                            data
-                        });
-                    }, 3000);
-                } else {
-                    console.log('setState no se llamo');
+                if (isMounted.current) {
+                    setState({
+                        loading: false,
+                        error: null,
+                        data
+                    });
                 }
             });
 
