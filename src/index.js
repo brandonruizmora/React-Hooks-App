@@ -9,11 +9,12 @@ import ReactDOM from 'react-dom';
 // import { FocusScreen } from './components/04-useRef/FocusScreen';
 // import { RealExampleRef } from './components/04-useRef/RealExampleRef';
 // import { Layout } from './components/05-useLayoutEffect/Layout';
-import { Memorize } from './components/useMemo/Memorize';
+// import { Memorize } from './components/useMemo/Memorize';
+import { MemoHook } from './components/useMemo/MemoHook';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Memorize />
+    <MemoHook />
   </React.StrictMode>,
   document.getElementById('root')
 );
