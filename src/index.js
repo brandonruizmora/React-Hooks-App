@@ -10,11 +10,12 @@ import ReactDOM from 'react-dom';
 // import { RealExampleRef } from './components/04-useRef/RealExampleRef';
 // import { Layout } from './components/05-useLayoutEffect/Layout';
 // import { Memorize } from './components/useMemo/Memorize';
-import { MemoHook } from './components/useMemo/MemoHook';
+// import { MemoHook } from './components/useMemo/MemoHook';
+import { CallbackHook } from './components/useMemo/CallbackHook';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MemoHook />
+    <CallbackHook />
   </React.StrictMode>,
   document.getElementById('root')
 );
