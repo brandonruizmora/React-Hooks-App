@@ -15,8 +15,19 @@ export const TodoApp = () => {
     });
 
     useEffect(() => {
-        localStorage.setItem('todos', JSON.stringify( todos ));
+        localStorage.setItem('todos', JSON.stringify(todos));
     }, [todos])
+
+    const handleDelete = function (todoId) {
+
+        const action = {
+            type: 'delete',
+            payload: todoId
+        }
+
+        dispatch(action);
+
+    }
 
     const handleSubmit = function (e) {
         e.preventDefault();
@@ -43,7 +54,7 @@ export const TodoApp = () => {
 
     return (
         <div className="container">
-            <h1>TodoApp {todos.length}</h1>
+            <h1>TodoApp ({todos.length})</h1>
             <hr />
             <div className="row">
                 <div className="col-7">
@@ -56,8 +67,15 @@ export const TodoApp = () => {
                                         className="list-group-item"
                                     >
                                         <div className="d-flex align-items-center justify-content-between">
-                                            <span>{idx + 1}. {todo.desc}</span>
-                                            <button className="btn btn-danger">borrar</button>
+                                            <span>
+                                                {idx + 1}. {todo.desc}
+                                            </span>
+                                            <button
+                                                className="btn btn-danger"
+                                                onClick={ () => handleDelete(todo.id)}
+                                            >
+                                                borrar
+                                            </button>
                                         </div>
                                     </li>
                                 )
