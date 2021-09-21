@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import { useForm } from '../../hooks/useForm';
+import { TodoList } from './TodoList';
 import { todoReducer } from './TodoReducer';
 
 export const TodoApp = () => {
@@ -66,33 +67,11 @@ export const TodoApp = () => {
             <hr />
             <div className="row">
                 <div className="col-7">
-                    <ul className="list-group list-group-flush">
-                        {
-                            todos.map((todo, idx) => {
-                                return (
-                                    <li
-                                        key={idx}
-                                        className="list-group-item"
-                                    >
-                                        <div className="d-flex align-items-center justify-content-between">
-                                            <span
-                                                onClick={() => handleToggle(todo.id)}
-                                                className={todo.done ? "pointer text-decoration-line-through" : "pointer"}
-                                            >
-                                                {idx + 1}. {todo.desc}
-                                            </span>
-                                            <button
-                                                className="btn btn-danger"
-                                                onClick={() => handleDelete(todo.id)}
-                                            >
-                                                borrar
-                                            </button>
-                                        </div>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
+                    <TodoList
+                        todos={todos}
+                        handleToggle={handleToggle}
+                        handleDelete={handleDelete}
+                    />
                 </div>
                 <div className="col-5">
                     <h4>Agregar TODO</h4>
