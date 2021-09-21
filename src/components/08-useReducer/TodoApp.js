@@ -29,6 +29,14 @@ export const TodoApp = () => {
 
     }
 
+    const handleToggle = function (todoId) {
+        const action = {
+            type: 'toggle',
+            payload: todoId
+        }
+        dispatch(action);
+    }
+
     const handleSubmit = function (e) {
         e.preventDefault();
 
@@ -67,12 +75,15 @@ export const TodoApp = () => {
                                         className="list-group-item"
                                     >
                                         <div className="d-flex align-items-center justify-content-between">
-                                            <span>
+                                            <span
+                                                onClick={() => handleToggle(todo.id)}
+                                                className={todo.done ? "pointer text-decoration-line-through" : "pointer"}
+                                            >
                                                 {idx + 1}. {todo.desc}
                                             </span>
                                             <button
                                                 className="btn btn-danger"
-                                                onClick={ () => handleDelete(todo.id)}
+                                                onClick={() => handleDelete(todo.id)}
                                             >
                                                 borrar
                                             </button>
