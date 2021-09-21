@@ -2,6 +2,7 @@ import React, { useEffect, useReducer } from 'react';
 import { todoReducer } from './TodoReducer';
 import { TodoAdd } from './TodoAdd';
 import { TodoList } from './TodoList';
+import './TodoApp.css';
 
 export const TodoApp = () => {
 

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/08-useReducer/TodoApp.css"],"names":[],"mappings":"AAAA,SACI,cACJ","file":"main.1d159524.chunk.css","sourcesContent":[".pointer {\r\n    cursor: pointer;\r\n}"]}
