@@ -13,11 +13,13 @@ import ReactDOM from 'react-dom';
 // import { MemoHook } from './components/06-useMemo/MemoHook';
 // import { CallbackHook } from './components/useMemo/CallbackHook';
 // import { Padre } from './components/07-tarea-memo/Padre';
-import { TodoApp } from './components/08-useReducer/TodoApp';
+// import { TodoApp } from './components/08-useReducer/TodoApp';
+import { MainApp } from './components/09-UseContext/MainApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodoApp />
+    <MainApp />
+    {/* <TodoApp /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
