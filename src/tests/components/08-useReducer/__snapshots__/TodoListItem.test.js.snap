@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <TodoListItem /> Debe de renderizar el componente correctamente 1`] = `
+<li
+  className="list-group-item"
+>
+  <div
+    className="d-flex align-items-center justify-content-between"
+  >
+    <span
+      className="pointer"
+      onClick={[Function]}
+    >
+      1
+      . 
+      Aprender React
+    </span>
+    <button
+      className="btn btn-danger"
+      onClick={[Function]}
+    >
+      borrar
+    </button>
+  </div>
+</li>
+`;
