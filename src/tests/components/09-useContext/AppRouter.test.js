@@ -1,25 +1,23 @@
 import '../../../setupTest';
 import { mount } from 'enzyme';
-import { HomeScreen } from '../../../components/09-UseContext/HomeScreen';
 import { UserContext } from '../../../components/09-UseContext/UserContext';
+import { AppRouter } from '../../../components/09-UseContext/AppRouter';
 import { user } from '../../fixtures/user';
 
-describe('Pruebas en <HomeScreen />', () => {
+describe('Pruebas en <AppRouter />', () => {
 
     const wrapper = mount(
         <UserContext.Provider value={{
             user
         }}>
-            <HomeScreen />
+            <AppRouter />
         </UserContext.Provider>
     );
 
-    test('Debe de retornar el componente correctamente', () => {
-
-        expect( wrapper ).toMatchSnapshot();
+    test('Debe de renderizarse correctamente', () => {
         
+        expect(wrapper).toMatchSnapshot();
+
     });
     
-
-
 });
