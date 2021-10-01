@@ -3,3 +3,5 @@ export const user = {
     nombre: 'Brandon',
     email: 'brandon@gmail.com'
 };
+
+export const setUser = jest.fn();

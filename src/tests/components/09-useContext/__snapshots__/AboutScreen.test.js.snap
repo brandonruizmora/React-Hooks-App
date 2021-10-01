@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <AboutScreen /> Debe de renderizarse correctamente 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    AboutScreen
+  </h1>
+  <hr />
+  <pre>
+    {
+   "id": 1,
+   "nombre": "Brandon",
+   "email": "brandon@gmail.com"
+}
+  </pre>
+  <button
+    className="btn btn-warning"
+    onClick={[Function]}
+  >
+    LogOut
+  </button>
+</div>
+`;

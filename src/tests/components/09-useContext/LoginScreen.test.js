@@ -2,11 +2,9 @@ import '../../../setupTest';
 import { mount } from 'enzyme';
 import { LoginScreen } from '../../../components/09-UseContext/LoginScreen';
 import { UserContext } from '../../../components/09-UseContext/UserContext';
-import { act } from '@testing-library/react';
+import { setUser } from '../../fixtures/user';
 
 describe('Pruebas en <LoginScreen />', () => {
-
-    const setUser = jest.fn();
 
     const wrapper = mount(
         <UserContext.Provider value={{
